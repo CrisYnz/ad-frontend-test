@@ -26,7 +26,10 @@ const config: Config = {
       },
       borderWidth: {
         '0.5': '0.5px',
-      }
+      },
+      borderRadius: {
+        '2x1': '16px',
+      },
     },
   },
   plugins: [],

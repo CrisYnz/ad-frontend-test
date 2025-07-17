@@ -63,9 +63,14 @@ function Catalog() {
   return (
     <div className="bg-background-main p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-text-primary">Top Sellers</h1>
-          <GenreFilter genres={availableGenres} />
+        <div className="flex flex-col items-start md:flex-row md:justify-between mb-6">
+          <h1 className="text-2xl leading-7 tracking-wide font-bold text-text-primary md:text-3xl">
+            Top Sellers
+          </h1>
+          
+          <div className="mt-4 md:mt-0">
+            <GenreFilter genres={availableGenres} />
+          </div>
         </div>
 
         {loading && games.length === 0 ? (
@@ -85,7 +90,7 @@ function Catalog() {
               <div className="text-left mt-8">
                 <button 
                   onClick={handleSeeMore}
-                  className="bg-text-primary text-white font-bold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity"
+                  className="w-full md:w-auto bg-text-primary text-white font-bold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity"
                 >
                   See More
                 </button>

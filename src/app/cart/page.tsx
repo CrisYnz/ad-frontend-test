@@ -17,21 +17,19 @@ const CartPage = () => {
 
         <h1 className="text-3xl font-bold text-text-primary mb-4">Your Cart</h1>
         <p className="text-text-secondary mb-4">{cart.length} {cart.length === 1 ? 'item' : 'items'}</p>
+        
         {cart.length === 0 ? (
           <p className="text-text-secondary">Your cart is empty.</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            
-            <div className="space-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+            <div className="space-y-4">
               {cart.map((item) => (
                 <CartItem key={item.id} item={item} />
               ))}
             </div>
-
             <div>
               <OrderSummary />
             </div>
-            
           </div>
         )}
       </div>

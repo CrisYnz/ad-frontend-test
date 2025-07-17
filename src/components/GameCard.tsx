@@ -21,28 +21,30 @@ const GameCard = ({ game }: GameCardProps) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden border-0.5 border-card-border flex flex-col">
-      <div className="relative h-48 w-full">
-        <Image
-          src={game.image}
-          alt={game.name}
-          layout="fill"
-          objectFit="cover"
-        />
-        {game.isNew && (
-          <span className="absolute top-2 left-2 bg-new-tag  text-xs px-2 py-1 rounded">
-            New
-          </span>
-        )}
+    <div className="bg-white rounded-lg shadow-lg border-0.5 border-card-border flex flex-col">
+      
+      <div className="p-4">
+        <div className="relative h-60 w-full rounded-t-2x1 overflow-hidden">
+          <Image
+            src={game.image}
+            alt={game.name}
+            layout="fill"
+            objectFit="cover"
+          />
+          {game.isNew && (
+            <span className="absolute top-2 left-2 bg-new-tag text-xs font-bold px-2 py-1 rounded">
+              New
+            </span>
+          )}
+        </div>
       </div>
-      <div className="p-4 flex flex-col flex-grow">
+      
+      <div className="px-4 pb-4 flex flex-col flex-grow">
         <p className="text-sm text-gray-500">{game.genre}</p>
-    
         <div className="flex justify-between items-start mt-1 flex-grow">
           <h3 className="text-lg font-bold text-text-primary">{game.name}</h3>
           <p className="text-xl font-bold text-text-primary text-right">${game.price.toFixed(2)}</p>
         </div>
-
         <div className="mt-4">
           <button
             onClick={handleCartAction}
