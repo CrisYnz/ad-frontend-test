@@ -28,8 +28,8 @@ const GameCard = ({ game }: GameCardProps) => {
           <Image
             src={game.image}
             alt={game.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
           {game.isNew && (
             <span className="absolute top-2 left-2 bg-new-tag text-xs font-bold px-2 py-1 rounded">

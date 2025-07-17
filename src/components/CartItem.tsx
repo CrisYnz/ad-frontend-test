@@ -29,8 +29,8 @@ const CartItem = ({ item }: CartItemProps) => {
             <Image 
               src={item.image} 
               alt={item.name} 
-              layout="fill" 
-              objectFit="cover" 
+              fill 
+              className="object-cover"
             />
           </div>
         </div>
