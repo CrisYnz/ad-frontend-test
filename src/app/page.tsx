@@ -82,7 +82,7 @@ function Catalog() {
             {loading && games.length > 0 && <div className="flex justify-center py-4"><LoadingSpinner /></div>}
             
             {page < totalPages && !loading && (
-              <div className="text-center mt-8">
+              <div className="text-left mt-8">
                 <button 
                   onClick={handleSeeMore}
                   className="bg-text-primary text-white font-bold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity"

@@ -22,7 +22,7 @@ const config: Config = {
         'new-tag': '#F5F5F4',        
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], 
+        sans: ['var(--font-archivo)', 'sans-serif'], 
       },
       borderWidth: {
         '0.5': '0.5px',

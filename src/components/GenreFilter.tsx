@@ -23,13 +23,19 @@ const GenreFilter = ({ genres }: GenreFilterProps) => {
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <label htmlFor="genre-filter" className="text-text-primary font-semibold">Genre</label>
+    <div className="flex items-center gap-3">
+      <label htmlFor="genre-filter" className="text-text-primary font-semibold">
+        Genre
+      </label>
+
+      <div className="h-6 border-l border-card-border"></div>
+
+      
       <select
         id="genre-filter"
         value={currentGenre}
         onChange={handleFilterChange}
-        className="bg-white border border-card-border text-text-primary rounded-md p-2"
+        className="bg-transparent text-text-primary focus:outline-none focus:ring-0 border-none"
       >
         <option value="all">All</option>
         {genres.map(genre => (
